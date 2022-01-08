@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'poppins';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 375px;
+    height: 667px;
+    background: #ffffff;
+    box-shadow: 5px 0 150px 1px rgb(0, 0, 0, .2);
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    box-shadow: 2px 0 10px 1px rgba(0, 0, 0, .2);
+    background: #449DD1;
+    color: #fff;
+}
+
+#msg {
+    padding: 1rem 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: .9rem;
+    margin: 1rem 0;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 400;
+    box-shadow: 0 0 5px 1px #00000059;
+    position: absolute;
+    width: calc(100% - 2rem);
+    top: -100px;
+    transition: top 300ms;
+}
+
+#msg.error {
+    background: red;
+    top: 0;
+}
+
+#msg.succes {
+    background: rgb(0, 200, 0);
+    top: 0;
+}
+
+#myForm {
+    display: flex;
+    position: relative;
+}
+
+#todoInput {
+    padding: 1rem .5rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    flex: 1;
+    transition: box-shadow 300ms;
+    border-radius: 5px;
+    border: 1px solid #78C0E0;
+}
+
+#todoInput:focus {
+    background: #78C0E0;
+}
+
+#todoInput::placeholder {
+    color: rgb(218, 218, 218);
+}
+
+
+
+#submitBtn {
+    padding: 1rem;
+    font-size: 1rem;
+    background: #78C0E0;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    margin-left: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#submitBtn:active {
+    opacity: .7;
+}
+
+.container {
+    padding: 1rem;
+    padding-bottom: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow-y: hidden;
+}
+
+ul {
+    width: 100%;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #449DD1;
+    border-radius: 50px;
+}
+
+li {
+    list-style: none;
+    background: #78C0E033;
+    color: #000;
+    margin-bottom: 1rem;
+    padding: 1rem 2.5rem;
+    font-weight: 100;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: 1px solid #78C0E0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    color: #fff;
+}
+
+li.done {
+    text-decoration: line-through;
+    color: #78C0E0;
+}
+
+li.done::before {
+    content: '\f00c';
+    background: #78C0E0;
+}
+
+li.done::after {
+    content: 'Delete';
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 60px;
+    height: 100%;
+    background: #78C0E0;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    box-shadow: 0 -4px 10px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: right 300ms;
+}
+
+li.done:hover:after {
+    right: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-top: 1px solid #449DD1;
+}
+
+#clearbtn {
+    padding: .5rem 1rem;
+    background: rgba(255, 0, 0, 0.1);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clearbtn:hover {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+#clearbtn:active {
+    background: rgba(255, 0, 0, 0.3);
+}
+
+.inputbx {
+    background: #449DD1;
+    padding: 1rem;
+}

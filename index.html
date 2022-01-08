@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Mahim | TODO App | Vanilla Javascript</title>
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <main>
+
+        <header>TODO</header>
+
+        <section class="container">
+            <ul id="todoCont">
+                <!-- 
+                    All the todos will be displayed 
+                    here wiht Javascript
+                 -->
+            </ul>
+
+            <footer>
+                <button id="clearbtn">Clear</button>
+            </footer>
+        </section>
+
+        <section class="inputbx">
+            <p id="msg"></p>
+            <form id="myForm">
+
+                <input type="text" id="todoInput" placeholder="Write here to create a Todo..." autocomplete="none">
+                <button id="submitBtn">Add</button>
+            </form>
+        </section>
+
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
